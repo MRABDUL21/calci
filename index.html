@@ -9,7 +9,7 @@
 <body>
   <div class="container">
   <h1>calculator</h1>
-  <input type="text" value="0" id="showing">
+  <input type="text" placeholder="0" id="showing">
  
   <div class="buttons">
   <button onclick="clearDisplay()">CL</button>
@@ -35,8 +35,12 @@
   </div>
   <script>
    const showing = document.getElementById("showing");
+   
    function display(val){
-    showing.value += val;
+    showing.value += val
+   }
+   function del(){
+      showing.value = showing.value.slice(0, -1)
    }
     function clearDisplay(){
       showing.value = "";
@@ -46,8 +50,9 @@
         showing.value = eval(showing.value);
       }
       catch{
-        showing.value = "Error";
+        showing.value = "Invalid Input";
       }
+
     }
     
   </script>

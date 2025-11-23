@@ -40,3 +40,8 @@ input {
 .equal{
   grid-column: span 2;
 }
+
+h1{
+  text-transform: uppercase;
+  font-weight:lighter
+}
